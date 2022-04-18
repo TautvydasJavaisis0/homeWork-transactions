@@ -1,10 +1,14 @@
 package com.tietoevry.backend.account.model.dto;
 
-import lombok.Builder;
-import lombok.Value;
+import lombok.*;
 
+import javax.validation.Valid;
+
+@Data
 @Builder
-@Value
+@AllArgsConstructor
+@NoArgsConstructor
+@Valid
 public class AccountDto {
     Long id;
     String accountNumber;

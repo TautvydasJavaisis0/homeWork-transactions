@@ -1,16 +1,15 @@
 package com.tietoevry.backend.transaction.model;
 
 import com.tietoevry.backend.account.model.dto.AccountDto;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.Valid;
 import java.util.Date;
 
+@Data
 @Builder
-@Setter
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Valid
 public class TransactionDto {
     Long id;

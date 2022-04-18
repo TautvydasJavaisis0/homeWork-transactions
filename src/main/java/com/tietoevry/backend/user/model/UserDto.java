@@ -1,14 +1,13 @@
 package com.tietoevry.backend.user.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.Valid;
 
+@Data
 @Builder
-@Setter
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Valid
 public class UserDto {
     Long id;

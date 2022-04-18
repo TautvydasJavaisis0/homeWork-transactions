@@ -23,7 +23,7 @@ public class SessionController {
     public Session createSession(HttpServletRequest httpServletRequest, @RequestBody LoginData sessionRequest) {
         return sessionService.createSession(
             httpServletRequest,
-            sessionRequest.getUsername(),
+            sessionRequest.getEmail(),
             sessionRequest.getPassword()
         );
     }
