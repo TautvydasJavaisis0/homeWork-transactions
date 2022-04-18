@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             corsConfiguration.setExposedHeaders(List.of("Authorization"));
 
         http
-            .cors().configurationSource(request -> corsConfiguration).and()
+            .cors().and()
             .csrf().disable()
             .headers().frameOptions().sameOrigin()
             .and()
