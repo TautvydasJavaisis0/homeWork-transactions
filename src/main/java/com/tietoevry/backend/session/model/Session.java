@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 @Builder
 public class Session {
-    private SessionUser user;
+    private SessionUser  user;
 }
