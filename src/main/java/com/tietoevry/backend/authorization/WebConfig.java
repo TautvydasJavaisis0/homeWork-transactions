@@ -13,8 +13,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addMapping("/**")
             .allowedOrigins("*")
             .allowedMethods("GET", "POST", "PUT", "DELETE", "PUT","OPTIONS","PATCH", "DELETE")
-            .allowedHeaders("header1", "header2", "header3")
-            .exposedHeaders("header1", "header2")
             .allowCredentials(true).maxAge(3600);
     }
 }
