@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+  <changeSet id="6" author="tautvydas">
+    <sql >
+        ALTER TABLE `transaction` ALTER COLUMN `creation_date` SET DATA TYPE DATE;
+
+        INSERT INTO `user` VALUES
+            (2, '$2a$10$n/mj3823gVUA5wszZfxdGu2jXPjn5giAW9CXi9k1rW3eKKEnz2fKW', 'user1', 'user1@gmail.com', 'useris1', 'useriauskas1'),
+            (3, '$2a$10$n/mj3823gVUA5wszZfxdGu2jXPjn5giAW9CXi9k1rW3eKKEnz2fKW', 'user2', 'user2@gmail.com', 'useris2', 'useriauskas2'),
+            (4, '$2a$10$n/mj3823gVUA5wszZfxdGu2jXPjn5giAW9CXi9k1rW3eKKEnz2fKW', 'user3', 'user3@gmail.com', 'useris3', 'useriauskas3');
+
+            INSERT INTO `user_role` VALUES
+            (2, 1),
+            (2, 1),
+            (2, 1);
+
+        INSERT INTO `account` VALUES
+            (1, 'LT1425845695', 10, 1),
+            (2, 'LT8542536852', 15, 2),
+            (3, 'LT7854358964', 200, 2),
+            (4, 'LT7717839798', 0, 3),
+            (5, 'LT6786752785', 2000, 4),
+            (6, 'LT7683243393', 3000, 2),
+            (7, 'LT9876546868', 500, 3),
+            (8, 'LT3213078585', 20, 4);
+
+        INSERT INTO `transaction` VALUES
+            (1, 'money to send', 10.0, '2022-02-12', 1, 2),
+            (2, 'test', 15.5, '2022-01-31', 2, 5),
+            (3, 'pervedimas', 200, '2022-02-05', 2, 7),
+            (4, 'skola', 9.99, '2022-03-22', 3, 2),
+            (5, 'roberto skola', 78, '2022-01-24', 4, 3),
+            (6, 'paleviciaus skola', 100, '2022-02-22', 5, 8),
+            (7, 'uz maista', 600, '2022-01-01', 6, 7),
+            (8, 'uz telefona', 59, '2022-02-22', 7, 6),
+            (9, 'money to send', 69.69, '2022-01-05', 8, 3),
+            (10, 'test', 1000.99, '2022-03-24', 2, 4),
+            (11, 'pervedimas', 333, '2022-04-04', 2, 8),
+            (12, 'skola', 666,'2022-04-01', 3, 6),
+            (13, 'roberto skola', 325,'2022-02-21', 4, 5),
+            (14, 'paleviciaus skola', 999, '2022-02-11', 5, 2),
+            (15, 'uz maista', 6.99, '2022-02-24', 3, 2),
+            (16, 'uz telefona', 78.99, '2022-04-02', 4, 5),
+            (17, 'money to send', 50, '2022-01-10', 8, 7),
+            (18, 'test', 900, '2022-01-31', 7, 2),
+            (19, 'pervedimas', 750, '2022-03-19', 2, 7),
+            (20, 'skola', 960, '2022-03-21', 3, 2),
+            (21, 'roberto skola', 180, '2022-03-26', 4, 6),
+            (22, 'paleviciaus skola', 360, '2022-04-18', 5, 4),
+            (23, 'uz maista', 560,'2022-03-21', 6, 1),
+            (24, 'uz telefona', 740, '2022-01-13', 8, 2);
+    </sql>
+  </changeSet>
+</databaseChangeLog>

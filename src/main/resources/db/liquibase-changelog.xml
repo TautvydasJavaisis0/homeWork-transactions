@@ -9,4 +9,5 @@
     <include file="changelog/03-bank-account.xml" relativeToChangelogFile="true"/>
     <include file="changelog/04-user-update.xml" relativeToChangelogFile="true"/>
     <include file="changelog/05-transaction.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/06-dummy-data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
