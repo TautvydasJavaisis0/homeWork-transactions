@@ -39,20 +39,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
-
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*")
-                        .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
                         .allowCredentials(true)
-                        .maxAge(3600);
-//                registry.addMapping("/**")
-//                        .allowedOrigins("http://localhost:3000", "http://localhost:8080")
-//                        .allowedMethods("*")
-//                        .allowedHeaders("Authorization", "Content-Type");
+                        .exposedHeaders("Location")
+                        .allowedOriginPatterns("*");
             }
         };
     }
@@ -73,18 +67,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(customUserDetailsService)
             .passwordEncoder(new BCryptPasswordEncoder());
     }
-    /*
-    @Bean
-    CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("*"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "PUT", "POST", "PATCH", "DELETE", "OPTIONS"));
-        configuration.setAllowCredentials(true);
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
-     */
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
