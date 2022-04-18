@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "-Dserver.port",
+      "type": "java.lang.String",
+      "description": "Description for -Dserver.port."
+  }
+] }
